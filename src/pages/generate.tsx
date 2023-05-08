@@ -7,13 +7,15 @@ export default function Generate() {
   return (
     <div>
       <div>Generate QR Code</div>
-      <input
-        type="text"
-        onChange={(e) => {
-          setQrCodeValue(e.target.value);
-        }}
-      />
-      {qrCodeValue && <QRCode value={qrCodeValue} />}
+      <div className="card" style={{ width: "20%" }}>
+        <input
+          type="text"
+          onChange={(e) => {
+            setQrCodeValue(e.target.value);
+          }}
+        />
+        {qrCodeValue && <QRCode value={qrCodeValue} />}
+      </div>
     </div>
   );
 }
