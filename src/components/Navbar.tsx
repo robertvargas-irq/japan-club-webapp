@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import UserNavCorner from "./User/UserNavCorner";
 
 export default function Navbar() {
   return (
@@ -41,6 +42,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
+        <UserNavCorner />
       </div>
     </nav>
   );
