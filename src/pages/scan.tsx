@@ -6,18 +6,17 @@ export default function Scan() {
 
   return (
     <div>
-      <div>Scan QR Code</div>
-      <QrReader
-        onResult={(result, error) => {
-          if (result) setData(result.getText());
-          if (error) console.info(error);
-        }}
-        constraints={{ facingMode: "environment" }}
-        videoContainerStyle={{
-          position: "fixed",
-        }}
-      />
-      <p>{data}</p>
+      <h1>Scan QR Code</h1>
+      <div className="card" style={{ width: "20%" }}>
+        <QrReader
+          onResult={(result, error) => {
+            if (result) setData(result.getText());
+            if (error) console.info(error);
+          }}
+          constraints={{ facingMode: "environment" }}
+        />
+        <p>{data}</p>
+      </div>
     </div>
   );
 }
